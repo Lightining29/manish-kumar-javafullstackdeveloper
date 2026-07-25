@@ -11,53 +11,17 @@ document.addEventListener('DOMContentLoaded', () => {
   projectAudio.volume = 0.7;
   projectAudio.preload = 'auto';
 
-  // Attempt instant autoplay immediately
-  const startupPromise = startupAudio.play();
-
-  if (startupPromise !== undefined) {
-    startupPromise.catch(() => {
-      // Browser blocked autoplay — show a one-click unmute overlay
-      const overlay = document.createElement('div');
-      overlay.id = 'audio-unmute-overlay';
-      overlay.innerHTML = `<div id="audio-unmute-box">
-        <span style="font-size:2rem;">🔊</span>
-        <span style="font-size:1rem;font-weight:700;letter-spacing:1px;">Click to Unmute</span>
-      </div>`;
-      overlay.style.cssText = `
-        position:fixed; inset:0; z-index:99999;
-        display:flex; align-items:center; justify-content:center;
-        background:rgba(8,8,10,0.82); backdrop-filter:blur(8px); cursor:pointer;
-      `;
-      document.getElementById('audio-unmute-box') && null;
-      const box = overlay.querySelector('#audio-unmute-box');
-      if (box) {
-        box.style.cssText = `
-          display:flex; flex-direction:column; align-items:center; gap:12px;
-          padding:36px 52px; border-radius:20px;
-          background:rgba(20,20,30,0.95); border:1.5px solid rgba(255,106,0,0.5);
-          color:#fff; box-shadow:0 20px 60px rgba(0,0,0,0.7);
-          animation: pulseGlow 1.4s ease-in-out infinite alternate;
-        `;
-      }
-
-      // Inject pulse animation
-      const style = document.createElement('style');
-      style.textContent = `@keyframes pulseGlow {
-        from { box-shadow: 0 0 20px rgba(255,106,0,0.3); }
-        to   { box-shadow: 0 0 50px rgba(255,106,0,0.8); }
-      }`;
-      document.head.appendChild(style);
-      document.body.appendChild(overlay);
-
-      overlay.addEventListener('click', () => {
-        startupAudio.currentTime = 0;
-        startupAudio.play().catch(() => {});
-        overlay.style.opacity = '0';
-        overlay.style.transition = 'opacity 0.3s ease';
-        setTimeout(() => overlay.remove(), 350);
-      });
-    });
-  }
+  // Attempt instant autoplay — plays silently if browser allows
+  startupAudio.play().catch(() => {
+    // If blocked, try again on first user interaction
+    const tryOnInteraction = () => {
+      startupAudio.play().catch(() => {});
+      document.removeEventListener('click', tryOnInteraction);
+      document.removeEventListener('scroll', tryOnInteraction);
+    };
+    document.addEventListener('click', tryOnInteraction);
+    document.addEventListener('scroll', tryOnInteraction);
+  });
 
   // 1. Dynamic Typing Effect
   const roles = [
