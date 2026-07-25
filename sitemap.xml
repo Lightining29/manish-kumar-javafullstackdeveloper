@@ -6,13 +6,13 @@
 
   <!-- MAIN PORTFOLIO -->
   <url>
-    <loc>https://www.manishkumar.dev/</loc>
+    <loc>https://manish-javafullstackdeveloper.netlify.app/</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://www.manishkumar.dev/index.html</loc>
+    <loc>https://manish-javafullstackdeveloper.netlify.app/index.html</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
@@ -20,13 +20,13 @@
 
   <!-- BLOG PAGES (High SEO Value) -->
   <url>
-    <loc>https://www.manishkumar.dev/blog-devops.html</loc>
+    <loc>https://manish-javafullstackdeveloper.netlify.app/blog-devops.html</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://www.manishkumar.dev/blog-java-fullstack.html</loc>
+    <loc>https://manish-javafullstackdeveloper.netlify.app/blog-java-fullstack.html</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
@@ -34,25 +34,25 @@
 
   <!-- TARGETED SEO LANDING PAGES -->
   <url>
-    <loc>https://www.manishkumar.dev/java-full-stack-developer.html</loc>
+    <loc>https://manish-javafullstackdeveloper.netlify.app/java-full-stack-developer.html</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.manishkumar.dev/devops-engineer.html</loc>
+    <loc>https://manish-javafullstackdeveloper.netlify.app/devops-engineer.html</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.manishkumar.dev/aws-solution-architect.html</loc>
+    <loc>https://manish-javafullstackdeveloper.netlify.app/aws-solution-architect.html</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.manishkumar.dev/linux-admin.html</loc>
+    <loc>https://manish-javafullstackdeveloper.netlify.app/linux-admin.html</loc>
     <lastmod>2026-07-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>

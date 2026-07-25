@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
 
-# Sitemap Index Files
-Sitemap: https://www.manishkumar.dev/sitemap.xml
-Sitemap: https://www.manishkumar.dev/sitemap.txt
+# Sitemap
+Sitemap: https://manish-javafullstackdeveloper.netlify.app/sitemap.xml
+Sitemap: https://manish-javafullstackdeveloper.netlify.app/sitemap.txt

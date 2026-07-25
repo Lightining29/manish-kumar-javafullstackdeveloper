@@ -1,8 +1,8 @@
-https://www.manishkumar.dev/
-https://www.manishkumar.dev/index.html
-https://www.manishkumar.dev/blog-devops.html
-https://www.manishkumar.dev/blog-java-fullstack.html
-https://www.manishkumar.dev/java-full-stack-developer.html
-https://www.manishkumar.dev/devops-engineer.html
-https://www.manishkumar.dev/aws-solution-architect.html
-https://www.manishkumar.dev/linux-admin.html
+https://manish-javafullstackdeveloper.netlify.app/
+https://manish-javafullstackdeveloper.netlify.app/index.html
+https://manish-javafullstackdeveloper.netlify.app/blog-devops.html
+https://manish-javafullstackdeveloper.netlify.app/blog-java-fullstack.html
+https://manish-javafullstackdeveloper.netlify.app/java-full-stack-developer.html
+https://manish-javafullstackdeveloper.netlify.app/devops-engineer.html
+https://manish-javafullstackdeveloper.netlify.app/aws-solution-architect.html
+https://manish-javafullstackdeveloper.netlify.app/linux-admin.html
