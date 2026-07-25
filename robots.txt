@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Sitemap Index Files
+Sitemap: https://www.manishkumar.dev/sitemap.xml
+Sitemap: https://www.manishkumar.dev/sitemap.txt
