@@ -2,7 +2,5 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://manish-java.vercel.app/sitemap.xml
-Sitemap: https://manish-java.vercel.app/sitemap.txt
 Sitemap: https://manish-javafullstackdeveloper.netlify.app/sitemap.xml
 Sitemap: https://manish-javafullstackdeveloper.netlify.app/sitemap.txt
