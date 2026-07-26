@@ -66,23 +66,29 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. Scroll Reveal Animations (Intersection Observer)
   const revealElements = document.querySelectorAll('.reveal');
 
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-        
-        // Trigger counter animation if hero stats inside
-        const statNumbers = entry.target.querySelectorAll('.stat-number');
-        if (statNumbers.length > 0) {
-          animateCounters(statNumbers);
+  if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          
+          // Trigger counter animation if hero stats inside
+          const statNumbers = entry.target.querySelectorAll('.stat-number');
+          if (statNumbers.length > 0) {
+            animateCounters(statNumbers);
+          }
         }
-      }
+      });
+    }, {
+      threshold: 0.02,
+      rootMargin: '0px 0px 50px 0px'
     });
-  }, {
-    threshold: 0.15
-  });
 
-  revealElements.forEach(el => revealObserver.observe(el));
+    revealElements.forEach(el => revealObserver.observe(el));
+  } else {
+    // Fallback if IntersectionObserver is not supported
+    revealElements.forEach(el => el.classList.add('active'));
+  }
 
   // 3. Stats Counter Animation
   let animated = false;
