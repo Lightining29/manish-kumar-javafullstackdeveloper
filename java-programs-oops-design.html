@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon Icons -->
+  <link rel="icon" type="image/png" href="manish1.png">
+  <link rel="shortcut icon" type="image/png" href="manish1.png">
+  <link rel="apple-touch-icon" href="manish1.png">
+
+  <!-- Primary SEO Meta Tags for Java OOPS Concepts -->
+  <title>Java OOPS Concepts & Design Patterns (Inheritance, Singleton) | Manish Kumar</title>
+  <meta name="title" content="Java OOPS Concepts & Design Patterns (Inheritance, Singleton) | Manish Kumar">
+  <meta name="description" content="Object-Oriented Programming (OOPS) in Java: Inheritance, Polymorphism, Encapsulation, Abstraction, Interface vs Abstract Class, and Singleton Pattern by Manish Kumar.">
+  <meta name="keywords" content="java oops concepts, singleton pattern java, interface vs abstract class java, polymorphism in java, encapsulation java, manish kumar java full stack">
+  <meta name="author" content="Manish Kumar">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://manish-java.vercel.app/java-programs-oops-design.html">
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { background: #08080a; color: #fff; font-family: 'Outfit', sans-serif; margin: 0; padding: 0; line-height: 1.7; }
+    .page-header { background: linear-gradient(135deg, #191024 0%, #31103f 100%); padding: 70px 40px 50px; text-align: center; border-bottom: 2px solid #a100ff; }
+    .page-header h1 { font-size: 2.5rem; margin-bottom: 12px; color: #fff; }
+    .page-header p { color: #e040fb; font-size: 1.05rem; max-width: 700px; margin: 0 auto 20px; }
+    .container { max-width: 900px; margin: 40px auto; padding: 0 24px 80px; }
+    .back-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 24px; background: linear-gradient(135deg, #a100ff, #e040fb); color: #fff; border-radius: 50px; text-decoration: none; font-weight: 600; margin-bottom: 20px; }
+    .code-snippet { background: #09090d; border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 16px; font-family: monospace; font-size: 0.88rem; color: #38bdf8; overflow-x: auto; margin: 12px 0 16px; white-space: pre; }
+    .program-card { background: #111118; border-radius: 16px; padding: 28px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.08); }
+    .program-card h2 { color: #a100ff; margin-top: 0; font-size: 1.3rem; }
+  </style>
+</head>
+<body>
+
+  <div class="page-header">
+    <a href="java-programs-library.html" class="back-btn">← Back to Java Library</a>
+    <h1>Java OOPS &amp; Design Patterns</h1>
+    <p>Core Java Object Oriented Programming concepts and design patterns explained by <strong>Manish Kumar</strong> (Java Full Stack Developer).</p>
+  </div>
+
+  <div class="container">
+
+    <div class="program-card">
+      <h2>1. Thread-Safe Singleton Design Pattern in Java</h2>
+      <p>Bill Pugh Singleton Implementation using static inner helper class:</p>
+      <div class="code-snippet">public class Singleton {
+    private Singleton() {}
+
+    private static class SingletonHelper {
+        private static final Singleton INSTANCE = new Singleton();
+    }
+
+    public static Singleton getInstance() {
+        return SingletonHelper.INSTANCE;
+    }
+}</div>
+    </div>
+
+    <div class="program-card">
+      <h2>2. Abstraction vs Polymorphism Example</h2>
+      <p>Demonstrating Method Overriding (Runtime Polymorphism) and Abstract Classes:</p>
+      <div class="code-snippet">abstract class Developer {
+    abstract void code();
+}
+
+class JavaDeveloper extends Developer {
+    @Override
+    void code() {
+        System.out.println("Coding in Java & Spring Boot — Manish Kumar");
+    }
+}</div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="index.html" class="back-btn">← Back to Manish Kumar Portfolio</a>
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,5 +1,10 @@
 https://manish-java.vercel.app/
 https://manish-java.vercel.app/index.html
+https://manish-java.vercel.app/java-programs-library.html
+https://manish-java.vercel.app/java-programs-string-array.html
+https://manish-java.vercel.app/java-programs-dsa-algorithms.html
+https://manish-java.vercel.app/java-programs-oops-design.html
+https://manish-java.vercel.app/java-programs-spring-boot.html
 https://manish-java.vercel.app/project-afsha-enterprises.html
 https://manish-java.vercel.app/project-programmingwala.html
 https://manish-java.vercel.app/project-rancom-technologies.html
@@ -11,6 +16,11 @@ https://manish-java.vercel.app/aws-solution-architect.html
 https://manish-java.vercel.app/linux-admin.html
 https://manish-javafullstackdeveloper.netlify.app/
 https://manish-javafullstackdeveloper.netlify.app/index.html
+https://manish-javafullstackdeveloper.netlify.app/java-programs-library.html
+https://manish-javafullstackdeveloper.netlify.app/java-programs-string-array.html
+https://manish-javafullstackdeveloper.netlify.app/java-programs-dsa-algorithms.html
+https://manish-javafullstackdeveloper.netlify.app/java-programs-oops-design.html
+https://manish-javafullstackdeveloper.netlify.app/java-programs-spring-boot.html
 https://manish-javafullstackdeveloper.netlify.app/project-afsha-enterprises.html
 https://manish-javafullstackdeveloper.netlify.app/project-programmingwala.html
 https://manish-javafullstackdeveloper.netlify.app/project-rancom-technologies.html

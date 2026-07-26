@@ -19,7 +19,39 @@
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
-  <!-- PROJECT CASE STUDY BLOGS (Targeting www.afshaenterprises.com, www.programmingwala.com, www.rancomtechnologies.com) -->
+  <!-- JAVA PROGRAMS & CODING LIBRARY (High Search Target) -->
+  <url>
+    <loc>https://manish-java.vercel.app/java-programs-library.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.98</priority>
+  </url>
+  <url>
+    <loc>https://manish-java.vercel.app/java-programs-string-array.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://manish-java.vercel.app/java-programs-dsa-algorithms.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://manish-java.vercel.app/java-programs-oops-design.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://manish-java.vercel.app/java-programs-spring-boot.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- PROJECT CASE STUDY BLOGS -->
   <url>
     <loc>https://manish-java.vercel.app/project-afsha-enterprises.html</loc>
     <lastmod>2026-07-26</lastmod>
@@ -38,6 +70,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
+
   <!-- TECHNICAL BLOGS -->
   <url>
     <loc>https://manish-java.vercel.app/blog-devops.html</loc>
@@ -91,6 +124,36 @@
     <lastmod>2026-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://manish-javafullstackdeveloper.netlify.app/java-programs-library.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.98</priority>
+  </url>
+  <url>
+    <loc>https://manish-javafullstackdeveloper.netlify.app/java-programs-string-array.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://manish-javafullstackdeveloper.netlify.app/java-programs-dsa-algorithms.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://manish-javafullstackdeveloper.netlify.app/java-programs-oops-design.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://manish-javafullstackdeveloper.netlify.app/java-programs-spring-boot.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
   </url>
   <url>
     <loc>https://manish-javafullstackdeveloper.netlify.app/project-afsha-enterprises.html</loc>

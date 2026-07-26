@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon Icons -->
+  <link rel="icon" type="image/png" href="manish1.png">
+  <link rel="shortcut icon" type="image/png" href="manish1.png">
+  <link rel="apple-touch-icon" href="manish1.png">
+
+  <!-- Primary SEO Meta Tags for String & Array Java Programs -->
+  <title>Java String & Array Programs (Top Interview Questions) | Manish Kumar</title>
+  <meta name="title" content="Java String & Array Programs (Top Interview Questions) | Manish Kumar">
+  <meta name="description" content="Popular Java String & Array coding programs including string reversing, anagram check, palindrome, array sorting, duplicate element removal, and 2D matrix operations by Manish Kumar.">
+  <meta name="keywords" content="java string programs, java array programs, reverse string java, anagram program in java, remove duplicates from array java, java coding interview, manish kumar java">
+  <meta name="author" content="Manish Kumar">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://manish-java.vercel.app/java-programs-string-array.html">
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { background: #08080a; color: #fff; font-family: 'Outfit', sans-serif; margin: 0; padding: 0; line-height: 1.7; }
+    .page-header { background: linear-gradient(135deg, #1e1b4b 0%, #31103f 100%); padding: 70px 40px 50px; text-align: center; border-bottom: 2px solid #ff6a00; }
+    .page-header h1 { font-size: 2.5rem; margin-bottom: 12px; color: #fff; }
+    .page-header p { color: #d880ff; font-size: 1.05rem; max-width: 700px; margin: 0 auto 20px; }
+    .container { max-width: 900px; margin: 40px auto; padding: 0 24px 80px; }
+    .back-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 24px; background: linear-gradient(135deg, #ff6a00, #ff9a56); color: #fff; border-radius: 50px; text-decoration: none; font-weight: 600; margin-bottom: 20px; }
+    .code-snippet { background: #09090d; border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 16px; font-family: monospace; font-size: 0.88rem; color: #38bdf8; overflow-x: auto; margin: 12px 0 16px; white-space: pre; }
+    .program-card { background: #111118; border-radius: 16px; padding: 28px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.08); }
+    .program-card h2 { color: #ff9a56; margin-top: 0; font-size: 1.3rem; }
+  </style>
+</head>
+<body>
+
+  <div class="page-header">
+    <a href="java-programs-library.html" class="back-btn">← Back to Java Library</a>
+    <h1>Java String &amp; Array Coding Programs</h1>
+    <p>Hand-crafted Java programs for string manipulations, array algorithms, and coding interview preparation by <strong>Manish Kumar</strong> (Java Full Stack Developer).</p>
+  </div>
+
+  <div class="container">
+
+    <div class="program-card">
+      <h2>1. Check if Two Strings are Anagrams in Java</h2>
+      <p>An anagram is a word formed by rearranging the letters of another word. Below is the Java implementation using char array sorting:</p>
+      <div class="code-snippet">import java.util.Arrays;
+
+public class AnagramCheck {
+    public static boolean isAnagram(String str1, String str2) {
+        char[] a1 = str1.replaceAll("\\s", "").toLowerCase().toCharArray();
+        char[] a2 = str2.replaceAll("\\s", "").toLowerCase().toCharArray();
+        if (a1.length != a2.length) return false;
+        Arrays.sort(a1);
+        Arrays.sort(a2);
+        return Arrays.equals(a1, a2);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(isAnagram("listen", "silent")); // Output: true
+    }
+}</div>
+    </div>
+
+    <div class="program-card">
+      <h2>2. Remove Duplicates from an Array in Java</h2>
+      <p>Remove duplicate elements from an array using Java 8 Streams or HashSet:</p>
+      <div class="code-snippet">import java.util.Arrays;
+
+public class RemoveDuplicates {
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3, 2, 4, 1, 5, 3};
+        int[] uniqueNumbers = Arrays.stream(numbers).distinct().toArray();
+        System.out.println("Unique Array: " + Arrays.toString(uniqueNumbers));
+    }
+}</div>
+    </div>
+
+    <div class="program-card">
+      <h2>3. Find First Non-Repeated Character in a String</h2>
+      <p>Find the first non-repeated character in a Java String using LinkedHashMap:</p>
+      <div class="code-snippet">import java.util.*;
+
+public class FirstNonRepeated {
+    public static Character getFirstNonRepeated(String str) {
+        Map&lt;Character, Integer&gt; counts = new LinkedHashMap&lt;&gt;();
+        for (char c : str.toCharArray()) counts.put(c, counts.getOrDefault(c, 0) + 1);
+        for (Map.Entry&lt;Character, Integer&gt; entry : counts.entrySet()) {
+            if (entry.getValue() == 1) return entry.getKey();
+        }
+        return null;
+    }
+}</div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="index.html" class="back-btn">← Back to Manish Kumar Portfolio</a>
+    </div>
+
+  </div>
+
+</body>
+</html>

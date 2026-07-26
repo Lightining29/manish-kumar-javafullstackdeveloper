@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon Icons -->
+  <link rel="icon" type="image/png" href="manish1.png">
+  <link rel="shortcut icon" type="image/png" href="manish1.png">
+  <link rel="apple-touch-icon" href="manish1.png">
+
+  <!-- Primary SEO Meta Tags for Spring Boot REST API -->
+  <title>Spring Boot REST API Tutorial & CRUD Program in Java | Manish Kumar</title>
+  <meta name="title" content="Spring Boot REST API Tutorial & CRUD Program in Java | Manish Kumar">
+  <meta name="description" content="Step-by-step Java Spring Boot REST API CRUD tutorial with JPA Hibernate, MySQL, Controller, Service, and Repository layers by Java Full Stack Developer Manish Kumar.">
+  <meta name="keywords" content="spring boot rest api tutorial, spring boot crud example java, java spring boot JPA MySQL, spring controller service repository, manish kumar java spring boot">
+  <meta name="author" content="Manish Kumar">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://manish-java.vercel.app/java-programs-spring-boot.html">
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { background: #08080a; color: #fff; font-family: 'Outfit', sans-serif; margin: 0; padding: 0; line-height: 1.7; }
+    .page-header { background: linear-gradient(135deg, #0d3b1e 0%, #111118 100%); padding: 70px 40px 50px; text-align: center; border-bottom: 2px solid #28a745; }
+    .page-header h1 { font-size: 2.5rem; margin-bottom: 12px; color: #fff; }
+    .page-header p { color: #5ddc7c; font-size: 1.05rem; max-width: 700px; margin: 0 auto 20px; }
+    .container { max-width: 900px; margin: 40px auto; padding: 0 24px 80px; }
+    .back-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 24px; background: linear-gradient(135deg, #28a745, #5ddc7c); color: #fff; border-radius: 50px; text-decoration: none; font-weight: 600; margin-bottom: 20px; }
+    .code-snippet { background: #09090d; border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 16px; font-family: monospace; font-size: 0.88rem; color: #38bdf8; overflow-x: auto; margin: 12px 0 16px; white-space: pre; }
+    .program-card { background: #111118; border-radius: 16px; padding: 28px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.08); }
+    .program-card h2 { color: #28a745; margin-top: 0; font-size: 1.3rem; }
+  </style>
+</head>
+<body>
+
+  <div class="page-header">
+    <a href="java-programs-library.html" class="back-btn">← Back to Java Library</a>
+    <h1>Java Spring Boot REST API CRUD Guide</h1>
+    <p>Complete Spring Boot RESTful API architecture with Spring Data JPA and MySQL by <strong>Manish Kumar</strong> (Java Full Stack Developer).</p>
+  </div>
+
+  <div class="container">
+
+    <div class="program-card">
+      <h2>1. Spring Boot Controller Layer (@RestController)</h2>
+      <p>Building REST HTTP endpoints for GET, POST, PUT, and DELETE operations:</p>
+      <div class="code-snippet">@RestController
+@RequestMapping("/api/products")
+public class ProductController {
+
+    @Autowired
+    private ProductService productService;
+
+    @GetMapping
+    public List&lt;Product&gt; getAllProducts() {
+        return productService.getAllProducts();
+    }
+
+    @PostMapping
+    public Product createProduct(@RequestBody Product product) {
+        return productService.saveProduct(product);
+    }
+}</div>
+    </div>
+
+    <div class="program-card">
+      <h2>2. Spring Data JPA Repository (@Repository)</h2>
+      <p>Interface extending JpaRepository for instant CRUD database methods:</p>
+      <div class="code-snippet">@Repository
+public interface ProductRepository extends JpaRepository&lt;Product, Long&gt; {
+    List&lt;Product&gt; findByCategory(String category);
+}</div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="index.html" class="back-btn">← Back to Manish Kumar Portfolio</a>
+    </div>
+
+  </div>
+
+</body>
+</html>
