@@ -1,5 +1,8 @@
 https://manish-java.vercel.app/
 https://manish-java.vercel.app/index.html
+https://manish-java.vercel.app/project-afsha-enterprises.html
+https://manish-java.vercel.app/project-programmingwala.html
+https://manish-java.vercel.app/project-rancom-technologies.html
 https://manish-java.vercel.app/blog-devops.html
 https://manish-java.vercel.app/blog-java-fullstack.html
 https://manish-java.vercel.app/java-full-stack-developer.html
@@ -8,6 +11,9 @@ https://manish-java.vercel.app/aws-solution-architect.html
 https://manish-java.vercel.app/linux-admin.html
 https://manish-javafullstackdeveloper.netlify.app/
 https://manish-javafullstackdeveloper.netlify.app/index.html
+https://manish-javafullstackdeveloper.netlify.app/project-afsha-enterprises.html
+https://manish-javafullstackdeveloper.netlify.app/project-programmingwala.html
+https://manish-javafullstackdeveloper.netlify.app/project-rancom-technologies.html
 https://manish-javafullstackdeveloper.netlify.app/blog-devops.html
 https://manish-javafullstackdeveloper.netlify.app/blog-java-fullstack.html
 https://manish-javafullstackdeveloper.netlify.app/java-full-stack-developer.html

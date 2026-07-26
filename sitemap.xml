@@ -19,6 +19,26 @@
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
+  <!-- PROJECT CASE STUDY BLOGS (Targeting www.afshaenterprises.com, www.programmingwala.com, www.rancomtechnologies.com) -->
+  <url>
+    <loc>https://manish-java.vercel.app/project-afsha-enterprises.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://manish-java.vercel.app/project-programmingwala.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://manish-java.vercel.app/project-rancom-technologies.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <!-- TECHNICAL BLOGS -->
   <url>
     <loc>https://manish-java.vercel.app/blog-devops.html</loc>
     <lastmod>2026-07-26</lastmod>
@@ -31,6 +51,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
+  <!-- TARGETED SEO LANDING PAGES -->
   <url>
     <loc>https://manish-java.vercel.app/java-full-stack-developer.html</loc>
     <lastmod>2026-07-26</lastmod>
@@ -70,6 +91,24 @@
     <lastmod>2026-07-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://manish-javafullstackdeveloper.netlify.app/project-afsha-enterprises.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://manish-javafullstackdeveloper.netlify.app/project-programmingwala.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://manish-javafullstackdeveloper.netlify.app/project-rancom-technologies.html</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
   </url>
   <url>
     <loc>https://manish-javafullstackdeveloper.netlify.app/blog-devops.html</loc>
