@@ -1,3 +1,11 @@
+https://manish-java.vercel.app/
+https://manish-java.vercel.app/index.html
+https://manish-java.vercel.app/blog-devops.html
+https://manish-java.vercel.app/blog-java-fullstack.html
+https://manish-java.vercel.app/java-full-stack-developer.html
+https://manish-java.vercel.app/devops-engineer.html
+https://manish-java.vercel.app/aws-solution-architect.html
+https://manish-java.vercel.app/linux-admin.html
 https://manish-javafullstackdeveloper.netlify.app/
 https://manish-javafullstackdeveloper.netlify.app/index.html
 https://manish-javafullstackdeveloper.netlify.app/blog-devops.html
