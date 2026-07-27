@@ -24,3 +24,7 @@ https://manish-javafullstackdeveloper.netlify.app/song-tum-hi-ho.html
 https://manish-javafullstackdeveloper.netlify.app/song-apna-bana-le.html
 https://manish-javafullstackdeveloper.netlify.app/song-kal-ho-naa-ho.html
 https://manish-javafullstackdeveloper.netlify.app/song-chaleya.html
+https://manish-javafullstackdeveloper.netlify.app/song-jaiye-sajna.html
+https://manish-javafullstackdeveloper.netlify.app/song-on-the-floor.html
+https://manish-javafullstackdeveloper.netlify.app/song-dil-ka-jo-haal-hai.html
+https://manish-javafullstackdeveloper.netlify.app/song-tipsy.html

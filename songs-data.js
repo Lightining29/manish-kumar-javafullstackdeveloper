@@ -240,6 +240,54 @@ const songsData = [
     lyrics: "Agg laavan majboori nu\nAan jaan di pasooriyan nu\nNachne de aaja dooriyan nu\nRaavan vich baavan boliyan nu\nPoore kare haan diyan nu...",
     description: "Coke Studio Season 14 viral global phenomenon that topped charts in over 50 countries."
   },
+  {
+    id: "jaiye-sajna",
+    title: "Jaiye Sajna (जाइये साजना)",
+    titleEn: "Jaiye Sajna - Dhurandhar",
+    artist: "Dhurandhar",
+    lang: "hi",
+    langLabel: "Hindi 🇮🇳",
+    category: "Bollywood / Pop",
+    youtubeId: "F2m4HPLvj-4",
+    lyrics: "जाइये साजना जाइये साजना\nदिल तोड़ के यूँ ना जाइये साजना\nतेरी यादों में हम खोये रहेंगे\nतुझसे ही हम दिल लगाए रहेंगे\n\nजाइये साजना... जाइये साजना!",
+    description: "Hit romantic track Jaiye Sajna from Dhurandhar with full HD music video and lyrics."
+  },
+  {
+    id: "dil-ka-jo-haal-hai",
+    title: "Dil Ka Jo Haal Hai (दिल का जो हाल है)",
+    titleEn: "Dil Ka Jo Haal Hai - Besharam",
+    artist: "Abhijeet Bhattacharya & Shreya Ghoshal",
+    lang: "hi",
+    langLabel: "Hindi 🇮🇳",
+    category: "Bollywood",
+    youtubeId: "udgrClXV26Y",
+    lyrics: "दिल का जो हाल है वो कैसे कहें आपसे\nइश्क में हम तो बेहाल हैं कब से\nतेरी निगाहों के तीरों से घायल हुए\nहम तो सनम बस तेरे ही कायल हुए...",
+    description: "Romantic hit song Dil Ka Jo Haal Hai from Besharam starring Ranbir Kapoor."
+  },
+  {
+    id: "tipsy",
+    title: "Tipsy",
+    titleEn: "Tipsy - Mehar Vaani Ft Amrit Maan",
+    artist: "Mehar Vaani Ft Amrit Maan (Desi Crew)",
+    lang: "hi",
+    langLabel: "Punjabi 🇮🇳",
+    category: "Punjabi Hit",
+    youtubeId: "9hKmhB5Ubuw",
+    lyrics: "Tipsy ho ke nachdi ae ni kudiye\nGaddiyan vich vajde Desi Crew de beat sohniye\nAmrit Maan naal Mehar Vaani da swag sohniye...",
+    description: "Latest Punjabi chartbuster Tipsy featuring Mehar Vaani and Amrit Maan with Desi Crew beats."
+  },
+  {
+    id: "on-the-floor",
+    title: "On The Floor",
+    titleEn: "On The Floor - JLo ft. Pitbull",
+    artist: "Jennifer Lopez ft. Pitbull",
+    lang: "en",
+    langLabel: "English 🇺🇸",
+    category: "Global Dance Hit",
+    youtubeId: "t4H_Zoh7G5A",
+    lyrics: "J.Lo! It's RedOne!\nLet's lose control, get it on the floor\nDance the night away, live your life and stay young on the floor...",
+    description: "Jennifer Lopez and Pitbull's record-breaking global dance anthem On The Floor."
+  },
 
   // ────────────────────────────────────────────────────────────
   // 3. ENGLISH (GLOBAL POP & ROCK)

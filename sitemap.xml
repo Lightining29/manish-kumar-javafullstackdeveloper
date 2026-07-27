@@ -173,5 +173,29 @@
     <changefreq>weekly</changefreq>
     <priority>0.94</priority>
   </url>
+  <url>
+    <loc>https://manish-javafullstackdeveloper.netlify.app/song-jaiye-sajna.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.94</priority>
+  </url>
+  <url>
+    <loc>https://manish-javafullstackdeveloper.netlify.app/song-on-the-floor.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.94</priority>
+  </url>
+  <url>
+    <loc>https://manish-javafullstackdeveloper.netlify.app/song-dil-ka-jo-haal-hai.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.94</priority>
+  </url>
+  <url>
+    <loc>https://manish-javafullstackdeveloper.netlify.app/song-tipsy.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.94</priority>
+  </url>
 
 </urlset>
