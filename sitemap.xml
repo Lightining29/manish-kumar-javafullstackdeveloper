@@ -135,5 +135,11 @@
     <changefreq>weekly</changefreq>
     <priority>0.92</priority>
   </url>
+  <url>
+    <loc>https://manish-javafullstackdeveloper.netlify.app/song.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
 
 </urlset>

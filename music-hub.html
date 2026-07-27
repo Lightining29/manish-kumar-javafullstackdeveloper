@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,62 +13,47 @@
   <meta name="msvalidate.01" content="889950D3507B5F364272A693096B86E5">
 
   <!-- Primary Meta Tags -->
-  <title>🎵 Japanese Song Video Hub &amp; Lyrics — Manish Kumar Portfolio</title>
-  <meta name="title" content="Japanese Song Video Hub — 妖怪ウォッチようかい体操第一・銀の龍の背に乗って・愛♡スクリ～ム！">
-  <meta name="description" content="日本の名曲・アニメソング【ようかい体操第一】【銀の龍の背に乗って】【愛♡スクリ～ム！】の動画視聴＆歌詞ライブラリ。Curated by Manish Kumar (Java &amp; DevOps Engineer).">
-  <meta name="keywords" content="ようかい体操第一, 銀の龍の背に乗って, 愛♡スクリ～ム！, 妖怪ウォッチ, 中島みゆき, 日本の歌 動画, J-Pop Lyrics, Manish Kumar">
+  <title>🎵 Multi-Lingual Song Video Hub &amp; Lyrics — Manish Kumar Music Network</title>
+  <meta name="title" content="Multi-Lingual Song Video Hub — Japanese, Hindi, English, K-Pop, Spanish">
+  <meta name="description" content="Explore popular songs across Japanese (J-Pop/Anime), Hindi (Bollywood), English, K-Pop, and Spanish with working video players and full lyrics. Curated by Manish Kumar.">
+  <meta name="keywords" content="Japanese songs, Hindi songs, Bollywood songs, English songs, K-Pop, Spanish songs, lyrics, music videos, Manish Kumar">
   <meta name="author" content="Manish Kumar">
   <meta name="robots" content="index, follow">
-  <meta name="language" content="Japanese">
   <link rel="canonical" href="https://manish-javafullstackdeveloper.netlify.app/music-hub.html">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://manish-javafullstackdeveloper.netlify.app/music-hub.html">
-  <meta property="og:title" content="🎵 Japanese Song Video Hub &amp; Lyrics — 楽曲視聴・歌詞">
-  <meta property="og:description" content="ようかい体操第一、銀の龍の背に乗って、愛♡スクリ～ム！の動画視聴・歌詞ライブラリ。">
+  <meta property="og:title" content="🎵 Multi-Lingual Song Video Hub &amp; Lyrics">
+  <meta property="og:description" content="Watch music videos and read lyrics across 5+ languages. Curated by Manish Kumar.">
   <meta property="og:image" content="https://manish-javafullstackdeveloper.netlify.app/manish.png">
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Japanese Song Video Hub &amp; Lyrics">
-  <meta name="twitter:description" content="人気ソング動画視聴＆歌詞ライブラリ。">
+  <meta name="twitter:title" content="Multi-Lingual Song Video Hub &amp; Lyrics">
+  <meta name="twitter:description" content="Popular songs, video players, and lyrics online.">
   <meta name="twitter:image" content="https://manish-javafullstackdeveloper.netlify.app/manish.png">
-
-  <!-- JSON-LD CollectionPage Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "CollectionPage",
-        "@id": "https://manish-javafullstackdeveloper.netlify.app/music-hub.html#webpage",
-        "url": "https://manish-javafullstackdeveloper.netlify.app/music-hub.html",
-        "name": "Japanese Song Video Hub & Lyrics",
-        "description": "Directory of Japanese songs with video playback and lyrics curated by Manish Kumar."
-      },
-      {
-        "@type": "Person",
-        "@id": "https://manish-javafullstackdeveloper.netlify.app/#person",
-        "name": "Manish Kumar",
-        "jobTitle": "Java Full Stack Developer & DevOps Engineer",
-        "url": "https://manish-javafullstackdeveloper.netlify.app/"
-      }
-    ]
-  }
-  </script>
 
   <!-- FontAwesome & CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <style>
-    .music-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 40px; }
+    .search-filter-box { max-width: 800px; margin: 30px auto; display: flex; flex-direction: column; gap: 20px; align-items: center; }
+    .search-input-wrapper { width: 100%; position: relative; }
+    .search-input-wrapper input { width: 100%; padding: 16px 24px 16px 54px; border-radius: 40px; background: var(--bg-secondary); border: 1.5px solid rgba(255,106,0,0.3); color: #fff; font-size: 1.05rem; outline: none; transition: var(--transition-smooth); }
+    .search-input-wrapper input:focus { border-color: var(--accent-color); box-shadow: 0 0 20px rgba(255,106,0,0.3); }
+    .search-input-wrapper i { position: absolute; left: 22px; top: 50%; transform: translateY(-50%); color: var(--accent-color); font-size: 1.2rem; }
+    .lang-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .lang-tab { padding: 8px 18px; border-radius: 20px; background: var(--bg-tertiary); border: 1px solid rgba(255,255,255,0.06); color: var(--text-secondary); font-weight: 600; font-size: 0.9rem; cursor: pointer; transition: var(--transition-smooth); }
+    .lang-tab.active, .lang-tab:hover { background: var(--accent-gradient); color: #fff; border-color: var(--accent-color); box-shadow: 0 4px 15px rgba(255,106,0,0.3); }
+    .music-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px; margin-top: 40px; }
     .music-card { background: var(--bg-secondary); border: 1px solid rgba(255,255,255,0.06); border-radius: 20px; overflow: hidden; transition: var(--transition-smooth); display: flex; flex-direction: column; justify-content: space-between; }
-    .music-card:hover { transform: translateY(-8px); border-color: rgba(255,106,0,0.4); box-shadow: 0 15px 35px rgba(255,106,0,0.2); }
+    .music-card:hover { transform: translateY(-8px); border-color: rgba(255,106,0,0.4); box-shadow: 0 15px 35px rgba(255,106,0,0.25); }
     .music-card-header { padding: 24px; }
-    .music-tag { font-size: 0.8rem; font-weight: 700; color: var(--accent-color); background: rgba(255,106,0,0.1); padding: 4px 12px; border-radius: 12px; display: inline-block; margin-bottom: 10px; }
-    .music-card-title { font-size: 1.4rem; color: #fff; margin-bottom: 8px; }
-    .music-card-desc { color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; margin-bottom: 20px; }
+    .music-tag { font-size: 0.78rem; font-weight: 700; color: var(--accent-color); background: rgba(255,106,0,0.1); padding: 4px 12px; border-radius: 12px; display: inline-block; margin-bottom: 10px; }
+    .music-card-title { font-size: 1.35rem; color: #fff; margin-bottom: 6px; }
+    .music-card-artist { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 12px; font-weight: 600; }
+    .music-card-desc { color: var(--text-muted); font-size: 0.88rem; line-height: 1.5; margin-bottom: 16px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
   </style>
 </head>
 <body>
@@ -92,70 +77,41 @@
 
   <main style="max-width: 1200px; margin: 0 auto; padding: 140px 24px 60px 24px;">
     <!-- Page Header -->
-    <div style="text-align: center; max-width: 750px; margin: 0 auto 50px auto;">
-      <span class="section-tag">🎵 Japanese Music &amp; Video Library</span>
-      <h1 class="section-title" style="margin-top: 10px;">Featured Japanese Songs &amp; Video Players</h1>
+    <div style="text-align: center; max-width: 800px; margin: 0 auto 30px auto;">
+      <span class="section-tag">🎵 Multi-Lingual Music &amp; Video Network</span>
+      <h1 class="section-title" style="margin-top: 10px;">Explore Popular Songs &amp; Video Players</h1>
       <p style="color: var(--text-secondary); font-size: 1.1rem; margin-top: 12px;">
-        Explore lyrics, watch music videos, and listen to iconic Japanese songs. Curated by <strong>Manish Kumar</strong> — Java Full Stack Developer &amp; DevOps Engineer.
+        Watch music videos, read native lyrics, and listen to hits across <strong>Japanese, Hindi, English, K-Pop, and Spanish</strong>. Curated by <strong>Manish Kumar</strong>.
       </p>
     </div>
 
+    <!-- Search & Filter Controls -->
+    <div class="search-filter-box">
+      <div class="search-input-wrapper">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="song-search-input" placeholder="Search songs by title, artist, language, or lyrics...">
+      </div>
+
+      <div class="lang-tabs" id="lang-tabs-container">
+        <button class="lang-tab active" data-lang="all">All Languages</button>
+        <button class="lang-tab" data-lang="ja">🇯🇵 Japanese (日本語)</button>
+        <button class="lang-tab" data-lang="hi">🇮🇳 Hindi (हिंदी)</button>
+        <button class="lang-tab" data-lang="en">🇺🇸 English</button>
+        <button class="lang-tab" data-lang="ko">🇰🇷 K-Pop (한국어)</button>
+        <button class="lang-tab" data-lang="es">🇲🇽 Spanish (Español)</button>
+      </div>
+    </div>
+
     <!-- Song Cards Grid -->
-    <div class="music-grid">
-      <!-- Song 1: ようかい体操第一 -->
-      <div class="music-card">
-        <div class="music-card-header">
-          <span class="music-tag">妖怪ウォッチ OST / J-Pop</span>
-          <h2 class="music-card-title">【妖怪ウォッチ】ようかい体操第一</h2>
-          <p class="music-card-desc">
-            大人気アニメ『妖怪ウォッチ』のテーマソング「ようかい体操第一」（Dream5）。踊れるダンス動画と完全歌詞を掲載。
-          </p>
-        </div>
-        <div style="padding: 0 24px 24px 24px;">
-          <a href="song-yokai-taisou-daiichi.html" class="btn btn-primary" style="width: 100%; text-align: center;">
-            <i class="fa-solid fa-play"></i> Watch Video &amp; Lyrics
-          </a>
-        </div>
-      </div>
-
-      <!-- Song 2: 銀の龍の背に乗って -->
-      <div class="music-card">
-        <div class="music-card-header">
-          <span class="music-tag">中島みゆき / Dr.コトー診療所</span>
-          <h2 class="music-card-title">銀の龍の背に乗って</h2>
-          <p class="music-card-desc">
-            ドラマ『Dr.コトー診療所』の主題歌として有名な中島みゆきの名曲。心揺さぶる名曲動画とフル歌詞。
-          </p>
-        </div>
-        <div style="padding: 0 24px 24px 24px;">
-          <a href="song-gin-no-ryuu-no-se-ni-notte.html" class="btn btn-primary" style="width: 100%; text-align: center;">
-            <i class="fa-solid fa-play"></i> Watch Video &amp; Lyrics
-          </a>
-        </div>
-      </div>
-
-      <!-- Song 3: 愛♡スクリ～ム！ -->
-      <div class="music-card">
-        <div class="music-card-header">
-          <span class="music-tag">J-Pop / Idol Dance</span>
-          <h2 class="music-card-title">愛♡スクリ～ム！</h2>
-          <p class="music-card-desc">
-            キャッチーなメロディと楽しいポップチューン「愛♡スクリ～ム！」。公式MV動画と歌詞。
-          </p>
-        </div>
-        <div style="padding: 0 24px 24px 24px;">
-          <a href="song-ai-scream.html" class="btn btn-primary" style="width: 100%; text-align: center;">
-            <i class="fa-solid fa-play"></i> Watch Video &amp; Lyrics
-          </a>
-        </div>
-      </div>
+    <div class="music-grid" id="music-grid">
+      <!-- Dynamically Rendered via JavaScript -->
     </div>
 
     <!-- Portfolio Backlink Banner -->
     <div style="margin-top: 60px; background: rgba(17,17,24,0.7); border: 1px solid rgba(255,106,0,0.3); border-radius: 20px; padding: 36px; text-align: center;">
       <h2 style="color: var(--accent-color); margin-bottom: 12px;"><i class="fa-solid fa-laptop-code"></i> Engineering Portfolio of Manish Kumar</h2>
       <p style="color: var(--text-secondary); max-width: 750px; margin: 0 auto 24px auto; font-size: 1.05rem;">
-        Looking for a DevOps Engineer, Java Full Stack Developer, or AWS Solution Architect? Check out Manish Kumar's engineering projects, enterprise case studies, and code libraries.
+        Looking for a DevOps Engineer, Java Full Stack Developer, or AWS Solution Architect? Explore Manish Kumar's projects, enterprise case studies, and Java code repositories.
       </p>
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
         <a href="index.html" class="btn btn-primary">Developer Portfolio <i class="fa-solid fa-user"></i></a>
@@ -178,6 +134,76 @@
     </div>
   </footer>
 
+  <script src="songs-data.js"></script>
   <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const musicGrid = document.getElementById('music-grid');
+      const searchInput = document.getElementById('song-search-input');
+      const tabs = document.querySelectorAll('.lang-tab');
+
+      let currentLang = 'all';
+      let searchQuery = '';
+
+      function renderSongs() {
+        const filtered = songsData.filter(song => {
+          const matchLang = currentLang === 'all' || song.lang === currentLang;
+          const matchQuery = !searchQuery || 
+            song.title.toLowerCase().includes(searchQuery) ||
+            song.artist.toLowerCase().includes(searchQuery) ||
+            song.category.toLowerCase().includes(searchQuery) ||
+            song.description.toLowerCase().includes(searchQuery);
+
+          return matchLang && matchQuery;
+        });
+
+        if (filtered.length === 0) {
+          musicGrid.innerHTML = `
+            <div style="grid-column: 1 / -1; text-align: center; padding: 50px 20px; color: var(--text-secondary);">
+              <i class="fa-solid fa-compact-disc fa-spin" style="font-size: 3rem; color: var(--accent-color); margin-bottom: 16px;"></i>
+              <h3>No songs found matching "${searchQuery}"</h3>
+              <p>Try searching for another artist or language category.</p>
+            </div>
+          `;
+          return;
+        }
+
+        musicGrid.innerHTML = filtered.map(song => `
+          <div class="music-card">
+            <div class="music-card-header">
+              <span class="music-tag">${song.langLabel} • ${song.category}</span>
+              <h2 class="music-card-title">${song.title}</h2>
+              <div class="music-card-artist"><i class="fa-solid fa-microphone"></i> ${song.artist}</div>
+              <p class="music-card-desc">${song.description}</p>
+            </div>
+            <div style="padding: 0 24px 24px 24px;">
+              <a href="song.html?id=${song.id}" class="btn btn-primary" style="width: 100%; text-align: center;">
+                <i class="fa-solid fa-play"></i> Watch Video &amp; Lyrics
+              </a>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      // Initial Render
+      renderSongs();
+
+      // Search Handler
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value.trim().toLowerCase();
+        renderSongs();
+      });
+
+      // Language Tab Handler
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          currentLang = tab.getAttribute('data-lang');
+          renderSongs();
+        });
+      });
+    });
+  </script>
 </body>
 </html>

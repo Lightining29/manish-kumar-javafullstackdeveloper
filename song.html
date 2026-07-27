@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon Icons -->
+  <link rel="icon" type="image/png" href="manish1.png">
+  <link rel="shortcut icon" type="image/png" href="manish1.png">
+
+  <!-- Search Engine Verification -->
+  <meta name="google-site-verification" content="lgji_Ykp2ayvq9uxiQMLZUhdX9gpNxMku6K_6NQhhkA">
+  <meta name="msvalidate.01" content="889950D3507B5F364272A693096B86E5">
+
+  <!-- Primary Dynamic SEO Meta Tags -->
+  <title id="meta-title">Popular Song Video Player &amp; Lyrics — Manish Kumar Music Network</title>
+  <meta id="meta-desc" name="description" content="Watch music videos, read full native lyrics, and stream popular songs. Curated by Manish Kumar (Java Full Stack Developer &amp; DevOps Engineer).">
+  <meta id="meta-keywords" name="keywords" content="Japanese songs, Hindi songs, English songs, K-Pop, Lyrics, Music Video Player, Manish Kumar">
+  <meta name="author" content="Manish Kumar">
+  <meta name="robots" content="index, follow">
+  <link id="canonical-url" rel="canonical" href="https://manish-javafullstackdeveloper.netlify.app/song.html">
+
+  <!-- Open Graph -->
+  <meta id="og-title" property="og:title" content="Popular Song Video Player &amp; Lyrics">
+  <meta id="og-desc" property="og:description" content="Watch music videos &amp; read full lyrics online.">
+  <meta property="og:image" content="https://manish-javafullstackdeveloper.netlify.app/manish.png">
+  <meta property="og:type" content="music.song">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta id="tw-title" name="twitter:title" content="Popular Song Video Player &amp; Lyrics">
+  <meta id="tw-desc" name="twitter:description" content="Watch music videos &amp; read full lyrics online.">
+  <meta name="twitter:image" content="https://manish-javafullstackdeveloper.netlify.app/manish.png">
+
+  <!-- JSON-LD Container -->
+  <script id="jsonld-schema" type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicRecording",
+    "name": "Popular Song Video Player",
+    "url": "https://manish-javafullstackdeveloper.netlify.app/song.html"
+  }
+  </script>
+
+  <!-- FontAwesome & CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .song-hero { padding-top: 130px; padding-bottom: 40px; text-align: center; }
+    .video-container { max-width: 860px; margin: 30px auto; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 50px rgba(255,106,0,0.25); border: 1px solid rgba(255,106,0,0.3); background: #000; position: relative; padding-bottom: 56.25%; height: 0; }
+    .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+    .lyrics-box { background: var(--bg-secondary); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 30px; max-width: 860px; margin: 40px auto; line-height: 2; text-align: left; }
+    .lyrics-box h3 { color: var(--accent-color); margin-bottom: 16px; border-bottom: 1px solid rgba(255,106,0,0.2); padding-bottom: 8px; }
+    .lang-pill { background: rgba(255,106,0,0.15); color: var(--accent-color); padding: 4px 14px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; display: inline-block; margin-bottom: 12px; }
+  </style>
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">MANISH<span> KUMAR</span></a>
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="music-hub.html" class="nav-link active">🎵 Music Hub</a></li>
+          <li><a href="java-programs-library.html" class="nav-link">Java Library</a></li>
+          <li><a href="blog-devops.html" class="nav-link">DevOps Blog</a></li>
+          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="music-hub.html" class="btn btn-primary nav-btn"><i class="fa-solid fa-music"></i> All Songs</a>
+    </div>
+  </header>
+
+  <main style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+    <!-- Dynamic Song Hero Section -->
+    <section class="song-hero">
+      <span class="lang-pill" id="song-lang">Loading...</span>
+      <h1 class="hero-title" id="song-title" style="font-size: 2.8rem; margin-top: 8px;">Loading Song...</h1>
+      <p style="color: var(--text-secondary); max-width: 700px; margin: 12px auto; font-size: 1.1rem;" id="song-artist">
+        Artist information
+      </p>
+
+      <!-- Video Player -->
+      <div class="video-container">
+        <iframe id="youtube-iframe" src="" title="Song Video Player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Lyrics & Information Section -->
+    <section>
+      <div class="lyrics-box">
+        <h3><i class="fa-solid fa-align-left"></i> Song Lyrics (歌詞 / बोल)</h3>
+        <p id="song-lyrics" style="white-space: pre-line;">Loading lyrics...</p>
+      </div>
+
+      <!-- Developer Backlinks Section -->
+      <div class="lyrics-box" style="border-color: rgba(255,106,0,0.3); background: rgba(27,27,34,0.8);">
+        <h3 style="color: #fff;"><i class="fa-solid fa-code"></i> Curated by Manish Kumar — Java &amp; DevOps Developer</h3>
+        <p style="color: var(--text-secondary);">
+          Thank you for visiting this music page! This page is curated and hosted on the developer portfolio of <strong>Manish Kumar</strong> — Java Full Stack Developer, DevOps Engineer, and AWS Solution Architect based in Ghaziabad, India.
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px;">
+          <a href="index.html" class="btn btn-primary" style="font-size: 0.9rem;">View Main Portfolio <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="java-programs-library.html" class="btn btn-secondary" style="font-size: 0.9rem;">50+ Java Programs <i class="fa-solid fa-code"></i></a>
+          <a href="music-hub.html" class="btn btn-secondary" style="font-size: 0.9rem;">Browse 100+ Songs <i class="fa-solid fa-music"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer style="margin-top: 60px;">
+    <div class="footer-content">
+      <div class="footer-text">
+        &copy; <span id="year">2026</span> <strong>Manish Kumar</strong>. All Rights Reserved.
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/Lightining29/manish-kumar-javafullstackdeveloper" target="_blank" class="social-icon"><i class="fa-brands fa-github"></i></a>
+        <a href="index.html" class="social-icon"><i class="fa-solid fa-user"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="songs-data.js"></script>
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const songId = urlParams.get('id') || 'ai-scream';
+
+      const song = songsData.find(s => s.id === songId) || songsData[0];
+
+      // Set Document Language
+      document.documentElement.lang = song.lang || 'en';
+
+      // Update Page Head Metadata
+      const fullTitle = `${song.title} (${song.artist}) — 歌詞・動画視聴 | Manish Kumar Music Library`;
+      document.title = fullTitle;
+      document.getElementById('meta-title').innerText = fullTitle;
+      document.getElementById('meta-desc').setAttribute('content', `${song.description} Lyrics and music video for ${song.title} by ${song.artist}.`);
+      document.getElementById('meta-keywords').setAttribute('content', `${song.title}, ${song.artist}, ${song.titleEn}, lyrics, music video, ${song.category}`);
+      document.getElementById('canonical-url').setAttribute('href', `https://manish-javafullstackdeveloper.netlify.app/song.html?id=${song.id}`);
+
+      // OpenGraph & Twitter
+      document.getElementById('og-title').setAttribute('content', fullTitle);
+      document.getElementById('og-desc').setAttribute('content', song.description);
+      document.getElementById('tw-title').setAttribute('content', fullTitle);
+      document.getElementById('tw-desc').setAttribute('content', song.description);
+
+      // DOM Content
+      document.getElementById('song-lang').innerText = `${song.langLabel} • ${song.category}`;
+      document.getElementById('song-title').innerText = song.title;
+      document.getElementById('song-artist').innerHTML = `Artist: <strong>${song.artist}</strong> | Curated by Manish Kumar`;
+      document.getElementById('youtube-iframe').src = `https://www.youtube-nocookie.com/embed/${song.youtubeId}?autoplay=0&rel=0`;
+      document.getElementById('song-lyrics').innerText = song.lyrics;
+
+      // JSON-LD Schema Update
+      const schemaData = {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "MusicRecording",
+            "@id": `https://manish-javafullstackdeveloper.netlify.app/song.html?id=${song.id}#song`,
+            "name": song.title,
+            "byArtist": { "@type": "MusicGroup", "name": song.artist },
+            "url": `https://manish-javafullstackdeveloper.netlify.app/song.html?id=${song.id}`
+          },
+          {
+            "@type": "VideoObject",
+            "name": `${song.title} - ${song.artist} Official Video`,
+            "description": song.description,
+            "thumbnailUrl": `https://img.youtube.com/vi/${song.youtubeId}/maxresdefault.jpg`,
+            "embedUrl": `https://www.youtube.com/embed/${song.youtubeId}`
+          },
+          {
+            "@type": "Person",
+            "@id": "https://manish-javafullstackdeveloper.netlify.app/#person",
+            "name": "Manish Kumar",
+            "jobTitle": "Java Full Stack Developer & DevOps Engineer",
+            "url": "https://manish-javafullstackdeveloper.netlify.app/"
+          }
+        ]
+      };
+      document.getElementById('jsonld-schema').textContent = JSON.stringify(schemaData);
+    });
+  </script>
+</body>
+</html>
