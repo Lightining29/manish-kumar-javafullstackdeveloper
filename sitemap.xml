@@ -110,4 +110,30 @@
     <priority>0.80</priority>
   </url>
 
+  <!-- JAPANESE SONG SEO & VIDEO PAGES -->
+  <url>
+    <loc>https://manish-javafullstackdeveloper.netlify.app/music-hub.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://manish-javafullstackdeveloper.netlify.app/song-yokai-taisou-daiichi.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+  </url>
+  <url>
+    <loc>https://manish-javafullstackdeveloper.netlify.app/song-gin-no-ryuu-no-se-ni-notte.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+  </url>
+  <url>
+    <loc>https://manish-javafullstackdeveloper.netlify.app/song-ai-scream.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+  </url>
+
 </urlset>
