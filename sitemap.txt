@@ -14,3 +14,7 @@ https://manish-javafullstackdeveloper.netlify.app/java-full-stack-developer.html
 https://manish-javafullstackdeveloper.netlify.app/devops-engineer.html
 https://manish-javafullstackdeveloper.netlify.app/aws-solution-architect.html
 https://manish-javafullstackdeveloper.netlify.app/linux-admin.html
+https://manish-javafullstackdeveloper.netlify.app/music-hub.html
+https://manish-javafullstackdeveloper.netlify.app/song-yokai-taisou-daiichi.html
+https://manish-javafullstackdeveloper.netlify.app/song-gin-no-ryuu-no-se-ni-notte.html
+https://manish-javafullstackdeveloper.netlify.app/song-ai-scream.html
