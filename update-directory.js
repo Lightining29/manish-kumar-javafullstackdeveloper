@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const DOMAIN = 'https://manish-javafullstackdeveloper.netlify.app';
+const DOMAIN = 'https://manishkumarjava.netlify.app';
 
 const allHtmlFiles = fs.readdirSync(__dirname)
   .filter(f => f.endsWith('.html') && !f.startsWith('google') && f !== 'index.html' && f !== 'seo-directory.html');

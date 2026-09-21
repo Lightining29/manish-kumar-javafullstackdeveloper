@@ -1,4 +1,4 @@
-# robots.txt for https://manish-javafullstackdeveloper.netlify.app/
+# robots.txt for https://manishkumarjava.netlify.app/
 # Solves all "Blocked by robots.txt" indexing errors
 
 User-agent: *
@@ -14,5 +14,5 @@ User-agent: Bingbot
 Allow: /
 
 # Sitemaps
-Sitemap: https://manish-javafullstackdeveloper.netlify.app/sitemap.xml
-Sitemap: https://manish-javafullstackdeveloper.netlify.app/sitemap.txt
+Sitemap: https://manishkumarjava.netlify.app/sitemap.xml
+Sitemap: https://manishkumarjava.netlify.app/sitemap.txt

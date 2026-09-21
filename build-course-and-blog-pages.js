@@ -7,7 +7,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const DOMAIN = 'https://manish-javafullstackdeveloper.netlify.app';
+const DOMAIN = 'https://manishkumarjava.netlify.app';
 
 const localities = [
   'Indirapuram', 'Vaishali', 'Vasundhara', 'Raj Nagar', 'Raj Nagar Extension',

@@ -41,11 +41,11 @@ for (const file of files) {
     
     // Check if canonical matches file
     if (file === 'index.html') {
-      if (canonicalHref !== 'https://manish-javafullstackdeveloper.netlify.app/') {
+      if (canonicalHref !== 'https://manishkumarjava.netlify.app/') {
         errors.push(`index.html canonical should be root '/' but found: ${canonicalHref}`);
       }
     } else {
-      const expectedHref = `https://manish-javafullstackdeveloper.netlify.app/${file}`;
+      const expectedHref = `https://manishkumarjava.netlify.app/${file}`;
       if (canonicalHref !== expectedHref) {
         errors.push(`${file} canonical mismatch! Expected ${expectedHref}, found: ${canonicalHref}`);
       }

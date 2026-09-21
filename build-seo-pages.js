@@ -8,7 +8,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const DOMAIN = 'https://manish-javafullstackdeveloper.netlify.app';
+const DOMAIN = 'https://manishkumarjava.netlify.app';
 
 // Localities in Ghaziabad and NCR hubs
 const localities = [
@@ -573,7 +573,7 @@ function generateHtml(page, index, allPages) {
           <div style="background: var(--bg-code); color: #e2e8f0; padding: 1.5rem; border-radius: var(--radius-md); font-family: var(--font-mono); font-size: 0.88rem; overflow-x: auto; box-shadow: var(--shadow-md);">
 <pre><code>@RestController
 @RequestMapping("/api/v1/ghaziabad/orders")
-@CrossOrigin(origins = "https://manish-javafullstackdeveloper.netlify.app")
+@CrossOrigin(origins = "https://manishkumarjava.netlify.app")
 public class EnterpriseOrderController {
 
     private final OrderProcessingService orderService;
