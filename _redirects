@@ -1,0 +1,6 @@
+# Netlify Redirects File
+# Solves canonical duplication: Redirect /index.html permanently to /
+/index.html  /  301!
+
+# Ensure canonical HTTPS and domain consistency
+http://manish-javafullstackdeveloper.netlify.app/* https://manish-javafullstackdeveloper.netlify.app/:splat 301!

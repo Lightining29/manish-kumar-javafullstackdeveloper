@@ -1,336 +1,227 @@
+/* ============================================================
+   MANISH KUMAR — PORTFOLIO & INTERACTIVE SUITE
+   FEATURES: Slide-in reveal, Slide-out drawer/modal, FAQ accordion,
+             Typing rotator, Toast notifications, Quick contact
+============================================================ */
+
 document.addEventListener('DOMContentLoaded', () => {
-
-  // ─────────────────────────────────────────────
-  // 0. AUDIO SETUP — Instant Autoplay
-  // ─────────────────────────────────────────────
-  const startupAudio = new Audio('startup.mpeg');
-  startupAudio.volume = 0.65;
-  startupAudio.preload = 'auto';
-
-  const projectAudio = new Audio('lala.mpeg');
-  projectAudio.volume = 0.7;
-  projectAudio.preload = 'auto';
-
-  // Attempt instant autoplay — plays silently if browser allows
-  startupAudio.play().catch(() => {
-    // If blocked, try again on first user interaction
-    const tryOnInteraction = () => {
-      startupAudio.play().catch(() => {});
-      document.removeEventListener('click', tryOnInteraction);
-      document.removeEventListener('scroll', tryOnInteraction);
-    };
-    document.addEventListener('click', tryOnInteraction);
-    document.addEventListener('scroll', tryOnInteraction);
-  });
-
-  // 1. Dynamic Typing Effect
-  const roles = [
-    "DevOps Engineer",
-    "Java Full Stack Developer",
-    "AWS Solution Architect"
-  ];
-  
-  const typingText = document.getElementById('typing-text');
-  let roleIndex = 0;
-  let charIndex = 0;
-  let isDeleting = false;
-  let typeSpeed = 100;
-
-  function typeEffect() {
-    const currentRole = roles[roleIndex];
-    
-    if (isDeleting) {
-      typingText.textContent = currentRole.substring(0, charIndex - 1);
-      charIndex--;
-      typeSpeed = 50;
-    } else {
-      typingText.textContent = currentRole.substring(0, charIndex + 1);
-      charIndex++;
-      typeSpeed = 100;
-    }
-
-    if (!isDeleting && charIndex === currentRole.length) {
-      isDeleting = true;
-      typeSpeed = 2000; // Pause at end
-    } else if (isDeleting && charIndex === 0) {
-      isDeleting = false;
-      roleIndex = (roleIndex + 1) % roles.length;
-      typeSpeed = 500; // Pause before next word
-    }
-
-    setTimeout(typeEffect, typeSpeed);
-  }
-
-  typeEffect();
-
-  // 2. Scroll Reveal Animations (Intersection Observer)
-  const revealElements = document.querySelectorAll('.reveal');
-
-  if ('IntersectionObserver' in window) {
-    const revealObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-          
-          // Trigger counter animation if hero stats inside
-          const statNumbers = entry.target.querySelectorAll('.stat-number');
-          if (statNumbers.length > 0) {
-            animateCounters(statNumbers);
-          }
-        }
-      });
-    }, {
-      threshold: 0.02,
-      rootMargin: '0px 0px 50px 0px'
-    });
-
-    revealElements.forEach(el => revealObserver.observe(el));
-  } else {
-    // Fallback if IntersectionObserver is not supported
-    revealElements.forEach(el => el.classList.add('active'));
-  }
-
-  // 3. Stats Counter Animation
-  let animated = false;
-  function animateCounters(counters) {
-    if (animated) return;
-    animated = true;
-
-    counters.forEach(counter => {
-      const target = +counter.getAttribute('data-target');
-      const duration = 2000;
-      const stepTime = 30;
-      const steps = duration / stepTime;
-      const increment = target / steps;
-      let current = 0;
-
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          counter.textContent = target;
-          clearInterval(timer);
-        } else {
-          counter.textContent = Math.ceil(current);
-        }
-      }, stepTime);
-    });
-  }
-
-  // 4. Mouse-Move & Scroll Parallax + 3D Stage Tilt Effect
-  const orb1 = document.getElementById('orb1');
-  const orb2 = document.getElementById('orb2');
-  const orb3 = document.getElementById('orb3');
-  const hero3dStage = document.getElementById('hero-3d-stage');
-
-  window.addEventListener('mousemove', (e) => {
-    const mouseX = e.clientX / window.innerWidth - 0.5;
-    const mouseY = e.clientY / window.innerHeight - 0.5;
-
-    // Interactive 3D Parallax Tilt
-    if (hero3dStage) {
-      const tiltX = mouseY * -18; // Max 18deg tilt X
-      const tiltY = mouseX * 18;  // Max 18deg tilt Y
-      hero3dStage.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
-    }
-
-    if (orb1) orb1.style.transform = `translate(${mouseX * 40}px, ${mouseY * 40}px)`;
-    if (orb2) orb2.style.transform = `translate(${mouseX * -30}px, ${mouseY * -30}px)`;
-    if (orb3) orb3.style.transform = `translate(${mouseX * 20}px, ${mouseY * -20}px)`;
-  });
-
-  window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    
-    // Parallax scroll shift
-    if (orb1) orb1.style.top = `${10 + scrollY * 0.05}%`;
-    if (orb2) orb2.style.bottom = `${10 - scrollY * 0.03}%`;
-
-    // Active Navigation Highlight
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    let currentSection = '';
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 150;
-      if (scrollY >= sectionTop) {
-        currentSection = section.getAttribute('id');
-      }
-    });
-
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${currentSection}`) {
-        link.classList.add('active');
-      }
-    });
-  });
-
-  // 5. Mobile Navigation Menu Toggle
-  const navToggle = document.getElementById('nav-toggle');
-  const navMenu = document.getElementById('nav-menu');
-
-  if (navToggle && navMenu) {
-    navToggle.addEventListener('click', () => {
-      navToggle.classList.toggle('open');
-      navMenu.classList.toggle('open');
-    });
-
-    // Close mobile menu on link click
-    document.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        navToggle.classList.remove('open');
-        navMenu.classList.remove('open');
-      });
-    });
-  }
-
-  // 6. Dynamic Year in Footer
-  const yearElement = document.getElementById('year');
-  if (yearElement) {
-    yearElement.textContent = new Date().getFullYear();
-  }
+  initScrollReveal();
+  initMobileDrawer();
+  initContactModal();
+  initFaqAccordions();
+  initTypeWriter();
+  initCopyActions();
+  initContactForm();
 });
 
-// 7. Project Modal Data & Dynamic Popup Handlers
-const projectData = {
-  afsha: {
-    title: "Afsha Enterprises",
-    clientTag: "E-Commerce Client Website",
-    url: "https://www.afshaenterprises.com/",
-    imageSrc: "afsha.png",
-    category: "E-Commerce Platform",
-    description: "A comprehensive, high-conversion E-Commerce web application developed for Afsha Enterprises. The platform specializes in premium electric body massagers, handheld therapy devices, and personal wellness equipment with nationwide delivery integration.",
-    features: [
-      "Integrated Razorpay secure payment gateway for instant online checkouts.",
-      "Custom product catalog management with responsive grid layouts.",
-      "Cart workflow & order calculation with live shipping logic.",
-      "Optimized for high performance, fast initial page load times, and SEO ranking."
-    ],
-    techStack: ["Java", "Spring Boot", "React JS", "Razorpay API", "MySQL", "CSS3 / HTML5"]
-  },
-  programmingwala: {
-    title: "ProgrammingWala",
-    clientTag: "LMS & Education System",
-    url: "https://www.programmingwala.com/",
-    imageSrc: "programmingwala.png",
-    category: "Learning Management System (MERN Stack)",
-    description: "An end-to-end Learning Management System (LMS) engineered for ProgrammingWala (Appletree Infotech coaching institute). Built on the MERN stack to deliver interactive coding courses, student portals, and video lecture series.",
-    features: [
-      "Architected using MERN Stack (MongoDB, Express, React, Node.js).",
-      "Interactive student portal with enrollment tracking and course modules.",
-      "Responsive video player integration and coding practice resources.",
-      "REST API backend managing authentication, student data, and course content."
-    ],
-    techStack: ["MERN Stack", "MongoDB", "Express.js", "React JS", "Node.js", "REST APIs"]
-  },
-  rancom: {
-    title: "Rancom Technologies",
-    clientTag: "Enterprise Company Website",
-    url: "https://www.rancomtechnologies.com/",
-    imageSrc: "rancomtechnologies.png",
-    category: "Enterprise Corporate Web Portal",
-    description: "Official corporate website for Rancom Technologies Pvt Ltd (a software development company in Noida, India, part of the Appletree Infotech group). Showcases enterprise software development, HRMS, ERP systems, and mobile application services.",
-    features: [
-      "Enterprise software showcase detailing custom IT, HRMS, and ERP solutions.",
-      "Full-stack web architecture integrated with cloud-ready deployment infrastructure.",
-      "Responsive corporate design system with smooth navigation and contact funnels.",
-      "SEO-optimized metadata and high-performance loading across mobile & desktop."
-    ],
-    techStack: ["Java", "MERN Stack", "AWS Cloud", "React JS", "Full Stack Architecture"]
-  }
-};
+/* --- Scroll-triggered Slide-In Reveal --- */
+function initScrollReveal() {
+  const reveals = document.querySelectorAll('.reveal');
+  if (!reveals.length) return;
 
-function openProjectModal(projectId) {
-  const modal = document.getElementById('projectModal');
-  const modalBody = document.getElementById('modalBody');
-  const project = projectData[projectId];
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-revealed');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -40px 0px'
+  });
 
-  if (!project) return;
-
-  const techBadgeHTML = project.techStack
-    .map(tech => `<span class="skill-tag" style="font-size: 0.8rem; padding: 6px 14px;">${tech}</span>`)
-    .join('');
-
-  const featuresHTML = project.features
-    .map(feat => `<li><i class="fa-solid fa-check-circle"></i> <span>${feat}</span></li>`)
-    .join('');
-
-  modalBody.innerHTML = `
-    <div style="border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); margin-bottom: 24px; box-shadow: 0 15px 35px rgba(0,0,0,0.5);">
-      <img src="${project.imageSrc}" alt="${project.title} Screenshot" style="width: 100%; height: auto; max-height: 340px; object-fit: cover; object-position: top center; display: block;">
-    </div>
-
-    <h2 class="modal-title">${project.title}</h2>
-    <p class="modal-subtitle"><i class="fa-solid fa-link"></i> <a href="${project.url}" target="_blank" rel="noopener noreferrer" style="color: var(--accent-color); text-decoration: underline;">${project.url}</a></p>
-
-    <div class="modal-section-title">Overview & Architecture</div>
-    <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 20px;">${project.description}</p>
-
-    <div class="modal-section-title">Key Highlights & Features</div>
-    <ul class="modal-features-list">
-      ${featuresHTML}
-    </ul>
-
-    <div class="modal-section-title">Technology Stack</div>
-    <div class="skills-list" style="margin-bottom: 24px;">
-      ${techBadgeHTML}
-    </div>
-
-    <div class="modal-actions">
-      <a href="${project.url}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-        Visit Live Website <i class="fa-solid fa-arrow-up-right-from-square"></i>
-      </a>
-      <button class="btn btn-secondary" onclick="closeProjectModal()">Close</button>
-    </div>
-  `;
-
-  modal.classList.add('active');
-  document.body.style.overflow = 'hidden';
-
-  // Play project audio
-  projectAudio.currentTime = 0;
-  projectAudio.play().catch(() => {});
+  reveals.forEach(el => observer.observe(el));
 }
 
-function closeProjectModal() {
-  const modal = document.getElementById('projectModal');
-  if (modal) {
+/* --- Slide-Out Mobile Navigation Drawer --- */
+function initMobileDrawer() {
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const drawer = document.querySelector('.mobile-drawer');
+  const backdrop = document.querySelector('.drawer-backdrop');
+  const closeBtn = document.querySelector('.drawer-close');
+  const links = document.querySelectorAll('.drawer-link');
+
+  if (!drawer || !backdrop) return;
+
+  function openDrawer() {
+    drawer.classList.add('active');
+    backdrop.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDrawer() {
+    drawer.classList.remove('active');
+    backdrop.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  if (toggleBtn) toggleBtn.addEventListener('click', openDrawer);
+  if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+  if (backdrop) backdrop.addEventListener('click', closeDrawer);
+
+  links.forEach(link => {
+    link.addEventListener('click', closeDrawer);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && drawer.classList.contains('active')) {
+      closeDrawer();
+    }
+  });
+}
+
+/* --- Slide-Out Quick Contact Modal --- */
+function initContactModal() {
+  const openBtns = document.querySelectorAll('[data-open-modal]');
+  const modal = document.querySelector('.modal-backdrop');
+  const closeBtn = document.querySelector('.modal-close');
+
+  if (!modal) return;
+
+  function openModal() {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
     modal.classList.remove('active');
     document.body.style.overflow = '';
-    // Stop project audio
-    projectAudio.pause();
-    projectAudio.currentTime = 0;
   }
+
+  openBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal();
+    });
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeModal();
+    }
+  });
 }
 
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closeProjectModal();
-});
+/* --- FAQ Accordions --- */
+function initFaqAccordions() {
+  const items = document.querySelectorAll('.faq-item');
 
-document.addEventListener('click', (e) => {
-  const modal = document.getElementById('projectModal');
-  if (e.target === modal) closeProjectModal();
-});
+  items.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    if (!question) return;
 
-// Form Submission Handler
-function handleFormSubmit(event) {
-  event.preventDefault();
-  const form = event.target;
-  const button = form.querySelector('button[type="submit"]');
-  
-  const originalText = button.innerHTML;
-  button.innerHTML = 'Sending... <i class="fa-solid fa-spinner fa-spin"></i>';
-  button.disabled = true;
+    question.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      items.forEach(i => i.classList.remove('active'));
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    });
+  });
+}
+
+/* --- Animated Rotating Subtitle --- */
+function initTypeWriter() {
+  const target = document.getElementById('typing-text');
+  if (!target) return;
+
+  const phrases = [
+    'Java Full Stack Developer',
+    'Spring Boot & Microservices Specialist',
+    'DevOps Engineer & Jenkins CI/CD Expert',
+    'AWS Solutions Architect & Cloud Integrator',
+    'Tech Consultant in Ghaziabad & Delhi NCR'
+  ];
+
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let delay = 100;
+
+  function tick() {
+    const current = phrases[phraseIndex];
+    if (isDeleting) {
+      target.textContent = current.substring(0, charIndex - 1);
+      charIndex--;
+      delay = 40;
+    } else {
+      target.textContent = current.substring(0, charIndex + 1);
+      charIndex++;
+      delay = 90;
+    }
+
+    if (!isDeleting && charIndex === current.length) {
+      delay = 2000;
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      delay = 400;
+    }
+
+    setTimeout(tick, delay);
+  }
+
+  tick();
+}
+
+/* --- Copy Actions & Slide-In Toast --- */
+function showToast(message) {
+  let toast = document.querySelector('.toast-notice');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.className = 'toast-notice';
+    toast.innerHTML = `<i class="fa-solid fa-circle-check"></i><span class="toast-msg"></span>`;
+    document.body.appendChild(toast);
+  }
+  toast.querySelector('.toast-msg').textContent = message;
+  toast.classList.add('show');
 
   setTimeout(() => {
-    button.innerHTML = 'Message Sent! <i class="fa-solid fa-check"></i>';
-    button.style.background = '#28a745';
-    form.reset();
+    toast.classList.remove('show');
+  }, 3200);
+}
 
-    setTimeout(() => {
-      button.innerHTML = originalText;
-      button.style.background = '';
-      button.disabled = false;
-    }, 3000);
-  }, 1200);
+function initCopyActions() {
+  document.querySelectorAll('[data-copy]').forEach(el => {
+    el.addEventListener('click', (e) => {
+      const text = el.getAttribute('data-copy');
+      if (text) {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast(`Copied to clipboard: ${text}`);
+        }).catch(() => {
+          showToast(`Selected: ${text}`);
+        });
+      }
+    });
+  });
+}
+
+/* --- Contact Form Handling --- */
+function initContactForm() {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = form.querySelector('[name="name"]')?.value || 'Visitor';
+    const email = form.querySelector('[name="email"]')?.value || '';
+    const message = form.querySelector('[name="message"]')?.value || '';
+
+    // Create mailto link as fallback or show success
+    const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+    
+    showToast('Preparing email inquiry...');
+    window.location.href = `mailto:brayw433@gmail.com?subject=${subject}&body=${body}`;
+  });
 }
