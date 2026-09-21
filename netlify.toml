@@ -1,0 +1,10 @@
+# Netlify Configuration File
+[build]
+  publish = "."
+
+# Ensure clean URLs work seamlessly (both /path and /path.html serve the file without 404)
+[build.processing]
+  skip_processing = false
+
+[build.processing.html]
+  pretty_urls = true

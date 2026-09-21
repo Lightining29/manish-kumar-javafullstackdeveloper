@@ -1,6 +1,3 @@
-# Netlify Redirects File for https://manishkumarjava.netlify.app
-# Solves canonical duplication: Redirect /index.html permanently to /
+# Netlify Redirects File
+# Permanent canonical redirect: /index.html -> /
 /index.html  /  301!
-
-# Enforce canonical HTTPS
-http://manishkumarjava.netlify.app/* https://manishkumarjava.netlify.app/:splat 301!
