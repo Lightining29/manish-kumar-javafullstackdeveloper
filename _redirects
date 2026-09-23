@@ -1,3 +1,15 @@
 # Netlify Redirects File
-# Permanent canonical redirect: /index.html -> /
+
+# Google site verification files (preserve direct 200 OK for Google crawlers)
+/google0c2ac26033b45cb2.html  /google0c2ac26033b45cb2.html  200
+/google9a75ada1724b7430.html  /google9a75ada1724b7430.html  200
+
+# Canonical root redirect
 /index.html  /  301!
+
+# Permanent 301 Domain Migration: Redirect old domain to new domain
+https://manish-javafullstackdeveloper.netlify.app/*  https://manishkumarjava.netlify.app/:splat  301!
+http://manish-javafullstackdeveloper.netlify.app/*  https://manishkumarjava.netlify.app/:splat  301!
+
+# Fallback 404 handler
+/*  /404.html  404
