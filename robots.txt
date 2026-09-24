@@ -14,5 +14,6 @@ User-agent: Bingbot
 Allow: /
 
 # Sitemaps
+Sitemap: https://manishkumarjava.netlify.app/sitemap-index.xml
 Sitemap: https://manishkumarjava.netlify.app/sitemap.xml
 Sitemap: https://manishkumarjava.netlify.app/sitemap.txt
